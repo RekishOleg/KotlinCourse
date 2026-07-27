@@ -8,5 +8,5 @@ fun main(){
     val ageBeforeChange = 20
     val ageAfterChange = 22
     println("$secondName $name $surname, $ageBeforeChange")
-    println("$secondNameAfterChange $name $surname, $ageBeforeChange")
+    println("$secondNameAfterChange $name $surname, $ageAfterChange")
 }
