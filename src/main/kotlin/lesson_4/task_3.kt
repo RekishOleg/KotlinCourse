@@ -10,7 +10,6 @@ fun main() {
     val openCanopyToday = true
     val airHumidityToday = 20
     val currentSeason = "Зима"
-
     println(
         "Благоприятные ли условия сейчас для роста бобовых?" +
                 " ${sunnyWeather == sunnyWeatherToday && openCanopy == openCanopyToday && AIR_HUMIDITY == airHumidityToday && RIGHT_SEASON != currentSeason} "
