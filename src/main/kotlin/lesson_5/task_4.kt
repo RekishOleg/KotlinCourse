@@ -17,7 +17,7 @@ fun main() {
     when (nameOfCurrentUser) {
         NAME_OF_USER_1 -> println("Пользователь найден, введите пароль")
         else -> {
-            println("Пользователь не найден, пройдите верификацию")
+            println("Пользователь не найден, пройдите регистрацию")
             return
         }
     }
