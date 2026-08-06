@@ -1,10 +1,8 @@
 ﻿package lesson_5
 
-fun main(){
-    val correctNumber1 = (0..42).random()
-    val correctNumber2 = (0..42).random()
-    val correctNumber3 = (0..42).random()
-    val correctNumbers = listOf(correctNumber1, correctNumber2, correctNumber3)
+fun main() {
+    val range = (0..42).toList()
+    val correctNumbers = range.shuffled().take(3)
 
     println("Введите три числа:")
     val userNumber1 = readln().toInt()
@@ -15,7 +13,7 @@ fun main(){
     val correctlyGuessedNumbers = correctNumbers.intersect(userNumbers)
     val numberOfCorrectGuesses = correctlyGuessedNumbers.size
 
-    when(numberOfCorrectGuesses){
+    when (numberOfCorrectGuesses) {
         3 -> println("Вы угадали все числа и выиграли джекпот!")
         2 -> println("Вы угадали два числа и получаете крупный приз!")
         1 -> println("Вы угадали одно число и получаете утешительный приз!")
