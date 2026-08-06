@@ -5,13 +5,13 @@ fun main() {
     val loginOfUser = readln()
     val passwordOfUser = readln()
     println("Введите логин и пароль чтобы войти в приложение:")
-    val enteredLogin = readln()
-    val enteredPassword = readln()
-    while (loginOfUser != enteredLogin && passwordOfUser != enteredPassword) {
+    var enteredLogin = readln()
+    var enteredPassword = readln()
+    while (loginOfUser != enteredLogin || passwordOfUser != enteredPassword) {
         println("Логин или пароль введён не верно")
         println("Введите логин и пароль чтобы войти в приложение:")
-        val enteredLogin = readln()
-        val enteredPassword = readln()
+        enteredLogin = readln()
+        enteredPassword = readln()
     }
     println("Авторизация прошла успешно")
 }
