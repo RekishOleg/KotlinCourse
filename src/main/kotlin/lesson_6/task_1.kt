@@ -7,7 +7,7 @@ fun main() {
     println("Введите логин и пароль чтобы войти в приложение:")
     val enteredLogin = readln()
     val enteredPassword = readln()
-    while (loginOfUser !=enteredLogin && passwordOfUser != enteredPassword) {
+    while (loginOfUser != enteredLogin && passwordOfUser != enteredPassword) {
         println("Логин или пароль введён не верно")
         println("Введите логин и пароль чтобы войти в приложение:")
         val enteredLogin = readln()
