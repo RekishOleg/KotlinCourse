@@ -1,10 +1,12 @@
 ﻿package lesson_7
 
 fun main() {
+    var smsCode = ""
+    var userCode = ""
     do {
-        val smsCode = (1000..9999).random().toString()
-        println("Ваш код для авторизации: $smsCode")
-        val userCode = readln()
+        smsCode = (1000..9999).random().toString()
+        println("Ваш код авторизации: $smsCode")
+        userCode = readln()
         if (userCode == smsCode) {
             println("Добро пожаловать!")
         }
