@@ -4,7 +4,7 @@ fun main() {
     println("Введите кол-во секунд которое нужно засечь:")
     val userNumber = readln().toInt()
 
-    for (i in 1..userNumber) {
+    for (i in userNumber downTo 1) {
         Thread.sleep(1000)
         println(i)
     }
