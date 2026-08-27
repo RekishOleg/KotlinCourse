@@ -9,7 +9,7 @@ fun main() {
     for (ingredient in arrayOfIngredients) {
 
         if (ingredient == userIngredient) {
-            println("Ингредиент [${userIngredient}] в рецепте есть")
+            println("Ингредиент ${userIngredient} в рецепте есть")
             isFound = true
             break
         }
