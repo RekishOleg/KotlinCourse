@@ -2,7 +2,7 @@
 
 fun main() {
     val listOfIngredients = mutableListOf("Яйцо", "Помидор", "Бекон")
-    println("В рецепте есть базовые ингредиенты: ${listOfIngredients.joinToString(", ")}")
+    println("В рецепте есть базовые ингредиенты: [${listOfIngredients.joinToString(", ")}]")
     println("Желаете добавить еще?")
     val userAnswer = readln()
 
@@ -15,6 +15,6 @@ fun main() {
 
     val userIngredient = readln()
     listOfIngredients.add(userIngredient)
-    println("Теперь в рецепте есть следующие ингредиенты: ${listOfIngredients.joinToString(", ")}")
+    println("Теперь в рецепте есть следующие ингредиенты: [${listOfIngredients.joinToString(", ")}]")
 
 }
