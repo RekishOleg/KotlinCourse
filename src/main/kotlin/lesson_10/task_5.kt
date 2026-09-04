@@ -5,7 +5,7 @@ const val USER_PASSWORD = "Qwerty123"
 const val POOL = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 val listOfProducts = listOf("Греча", "Сыр", "Колбаса")
 
-fun authorization(login: String, password: String): String? =
+fun authenticateUser(login: String, password: String): String? =
     if (login == USER_LOGIN && password == USER_PASSWORD) {
         (List(32) { POOL.random() }).joinToString("")
 
@@ -14,11 +14,9 @@ fun authorization(login: String, password: String): String? =
     }
 
 fun main() {
-    println("Введите логин")
-    val currentLogin = readln()
-    println("Введите пароль")
-    val currentPassword = readln()
-    val currentToken = authorization(login = currentLogin, password = currentPassword)
+    val currentLogin = "Admin"
+    val currentPassword = "Qwerty123"
+    val currentToken = authenticateUser(login = currentLogin, password = currentPassword)
 
     if (currentToken != null) {
         println(getTheShoppingCart(token = currentToken).joinToString(", "))
