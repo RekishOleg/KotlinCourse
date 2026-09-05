@@ -4,11 +4,11 @@ class User2(
     val id: Int,
     val login: String,
     var password: String,
-    val mail: String,
+    val email: String,
     var bio: String = "",
 ) {
     fun printInformationOfUser() {
-        println("$id, $login, $password, $mail, $bio")
+        println("$id, $login, $password, $email, $bio")
     }
 
     fun changeBio() {
@@ -29,7 +29,8 @@ class User2(
 }
 
 fun main() {
-    val user1 = User2(id = 1, login = "Oleg", password = "password", mail = "my_email.com", bio = "Kotlin")
+    val user1 = User2(id = 1, login = "Oleg", password = "password", email = "my_email.com")
+    user1.changeBio()
     user1.changePassword()
     user1.printInformationOfUser()
 }
