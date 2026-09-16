@@ -24,7 +24,7 @@ fun main() {
     }
     val listOfDayTemperature = listOfWeather.map { it.dayTemperature }
     val listOfNightTemperature = listOfWeather.map { it.nightTemperature }
-    val countOfPrecipitations = listOfWeather.count { it.isPrecipitation == 1 }
+    val countOfPrecipitations = listOfWeather.count { it.isPrecipitation == true }
     val averageDayTemperature = listOfDayTemperature.average()
     val averageNightTemperature = listOfNightTemperature.average()
     println(
