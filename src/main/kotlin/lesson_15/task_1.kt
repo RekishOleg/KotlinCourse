@@ -1,4 +1,4 @@
-﻿package lesson_16
+﻿package lesson_15
 
 interface Flight {
     fun fly(): String
