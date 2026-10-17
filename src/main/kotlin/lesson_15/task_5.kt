@@ -39,6 +39,14 @@ class Truck(
     val cargoCapacity: Int = MAX_TRUCK_CARGO_CAPACITY,
     passengerCapacity: Int = MAX_TRUCK_PASSENGERS_CAPACITY,
 ) : Transport(passengerCapacity), VehicleMovement, CargoTransport {
+    init {
+        require(cargoCapacity in 1..MAX_TRUCK_CARGO_CAPACITY) {
+            "Грузоподъёмность грузовика не может быть больше $MAX_TRUCK_CARGO_CAPACITY т"
+        }
+        require(passengerCapacity in 1..MAX_TRUCK_PASSENGERS_CAPACITY) {
+            "Грузовик вмещает не больше $MAX_TRUCK_PASSENGERS_CAPACITY пассажира"
+        }
+    }
 
     private var currentCargo = 0
 
@@ -62,6 +70,11 @@ class Truck(
 class PassengerCar(
     passengerCapacity: Int = MAX_PASSENGER_CAR_PASSENGERS_CAPACITY,
 ) : Transport(passengerCapacity), VehicleMovement {
+    init {
+        require(passengerCapacity in 1..MAX_PASSENGER_CAR_PASSENGERS_CAPACITY) {
+            "Пассажирская машина вмещает не больше $MAX_PASSENGER_CAR_PASSENGERS_CAPACITY пассажира"
+        }
+    }
 
     override fun moving() {
         print("Легковая машина поехала")
