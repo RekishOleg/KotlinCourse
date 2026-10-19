@@ -3,9 +3,12 @@
 class Player(
     val name: String,
     initialHealth: Int,
-    var attackPower: Int,
-    var canHealing: Boolean = true,
+    initialAttackPower: Int,
+    private var canHealing: Boolean = true,
 ) {
+    var attackPower = initialAttackPower
+        private set
+
     var health = initialHealth
         private set
 
