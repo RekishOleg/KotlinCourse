@@ -1,8 +1,8 @@
 ﻿package lesson_17
 
 class Folder(
-    val realName: String,
-    val realNumberOfFiles: Int,
+    private val realName: String,
+    private val realNumberOfFiles: Int,
     val isSecret: Boolean,
 ) {
     val name: String
