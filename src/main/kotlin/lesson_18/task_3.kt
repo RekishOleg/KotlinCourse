@@ -5,7 +5,7 @@ abstract class Animal(
 ) {
     abstract val food: String
     fun sleep() {
-        println("$name - спит")
+        println("$name -> спит")
     }
 
     fun eat() {
