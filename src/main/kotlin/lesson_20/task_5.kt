@@ -1,26 +1,26 @@
 ﻿package lesson_20
 
 class Robot {
-    var modifier: ((String) -> String)? = null
+    private var speechModifier: ((String) -> String)? = null
     val phrases = listOf("Hello", "How are you?", "Bie", "Hi", "You are pretty")
 
     fun say() {
-        val current = modifier
-        val randomPhrases = phrases.random()
+        val current = speechModifier
+        val randomPhrase = phrases.random()
 
         if (current != null) {
-            println(current(randomPhrases))
-        } else println(randomPhrases)
+            println(current(randomPhrase))
+        } else println(randomPhrase)
     }
 
-    fun speechModifier(lambda: (String) -> String) {
-        modifier = lambda
+    fun setModifier(lambda: (String) -> String) {
+        speechModifier = lambda
     }
 }
 
 fun main() {
     val robot = Robot()
     robot.say()
-    robot.speechModifier { phrase -> phrase.reversed() }
+    robot.setModifier { phrase -> phrase.reversed() }
     robot.say()
 }
